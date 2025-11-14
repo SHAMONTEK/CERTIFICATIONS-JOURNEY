@@ -1,0 +1,323 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>ShaMonte's AI Cert Roadmap</title>
+    <!-- Load Tailwind CSS -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    <!-- Use Inter font -->
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    fontFamily: {
+                        sans: ['Inter', 'sans-serif'],
+                    },
+                },
+            },
+        }
+    </script>
+    <style>
+        /* Simple style for the <details> toggle marker */
+        summary {
+            cursor: pointer;
+            font-weight: 600;
+            list-style: none; /* Remove default marker */
+        }
+        summary::-webkit-details-marker {
+            display: none; /* Hide for Webkit */
+        }
+        summary:before {
+            content: '►';
+            margin-right: 0.5rem;
+            font-size: 0.8em;
+            transition: transform 0.2s ease-in-out;
+        }
+        details[open] > summary:before {
+            transform: rotate(90deg);
+        }
+    </style>
+</head>
+<body class="bg-gray-50 font-sans text-gray-800">
+
+    <!-- Main Page Container -->
+    <div class="max-w-4xl mx-auto p-6 md:p-12">
+
+        <!-- Page Header -->
+        <div class="mb-8">
+            <div class="text-6xl mb-4">🛣️</div>
+            <h1 class="text-4xl font-bold text-gray-900">ShaMonte's AI Cert Roadmap</h1>
+            <p class="text-lg text-gray-600 mt-2">Fall 2026 → Spring 2028 | Comfort-Paced & Budget-Aware</p>
+        </div>
+
+        <!-- Callout Block: Core Goal -->
+        <div class="bg-blue-50 border-l-4 border-blue-400 p-5 rounded-r-lg my-6 flex items-start space-x-4">
+            <svg class="w-6 h-6 text-blue-600 flex-shrink-0 mt-1" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M13 16h-1v-4h-1m1-4h.01M21 12a9 9 0 11-18 0 9 9 0 0118 0z"></path></svg>
+            <div>
+                <h2 class="font-semibold text-blue-800">Your Core Goal</h2>
+                <p class="text-blue-700">Walk out with a CS degree + 6 high-value certs that match your actual brain: AI reasoning, automation, system thinking, prompt architecture, and government-safe pathways.</p>
+            </div>
+        </div>
+
+        <!-- Progress Tracker -->
+        <div class="mb-8">
+            <div class="flex justify-between items-center mb-2">
+                <span class="text-lg font-semibold text-gray-700">Certification Progress</span>
+                <span id="progressText" class="text-lg font-semibold text-gray-700">0 / 6</span>
+            </div>
+            <div class="w-full bg-gray-200 rounded-full h-4">
+                <div id="progressBar" class="bg-blue-600 h-4 rounded-full transition-all duration-500" style="width: 0%"></div>
+            </div>
+        </div>
+
+
+        <!-- Certifications "Database" -->
+        <details open class="mb-6">
+            <summary class="text-2xl font-semibold text-gray-800 py-2">Certifications Tracker</summary>
+            <div class="grid grid-cols-1 md:grid-cols-2 gap-4 pt-4">
+                
+                <!-- Cert Card 1 -->
+                <div class="bg-white border border-gray-200 rounded-lg p-5 shadow-sm">
+                    <label for="cert1" class="flex items-center justify-between cursor-pointer">
+                        <span class="text-lg font-semibold text-gray-900">Google AI/ML Certificate</span>
+                        <input type="checkbox" id="cert1" class="cert-checkbox h-5 w-5 text-blue-600 rounded border-gray-300 focus:ring-blue-500">
+                    </label>
+                    <p class="text-sm text-gray-500 mt-2">Cost: ~$200</p>
+                    <p class="text-gray-700 mt-3"><strong>Fit:</strong> Perfect starter → AI reasoning + model behavior understanding.</p>
+                </div>
+
+                <!-- Cert Card 2 -->
+                <div class="bg-white border border-gray-200 rounded-lg p-5 shadow-sm">
+                    <label for="cert2" class="flex items-center justify-between cursor-pointer">
+                        <span class="text-lg font-semibold text-gray-900">CompTIA Data+</span>
+                        <input type="checkbox" id="cert2" class="cert-checkbox h-5 w-5 text-blue-600 rounded border-gray-300 focus:ring-blue-500">
+                    </label>
+                    <p class="text-sm text-gray-500 mt-2">Cost: ~$519</p>
+                    <p class="text-gray-700 mt-3"><strong>Fit:</strong> Teaches reasoning about data → feeds your “AI that understands humans” niche.</p>
+                </div>
+
+                <!-- Cert Card 3 -->
+                <div class="bg-white border border-gray-200 rounded-lg p-5 shadow-sm">
+                    <label for="cert3" class="flex items-center justify-between cursor-pointer">
+                        <span class="text-lg font-semibold text-gray-900">IBM Applied AI Cert</span>
+                        <input type="checkbox" id="cert3" class="cert-checkbox h-5 w-5 text-blue-600 rounded border-gray-300 focus:ring-blue-500">
+                    </label>
+                    <p class="text-sm text-gray-500 mt-2">Cost: ~$195</p>
+                    <p class="text-gray-700 mt-3"><strong>Fit:</strong> Hands-on agent building + prompt engineering foundations.</p>
+                </div>
+
+                <!-- Cert Card 4 -->
+                <div class="bg-white border border-gray-200 rounded-lg p-5 shadow-sm">
+                    <label for="cert4" class="flex items-center justify-between cursor-pointer">
+                        <span class="text-lg font-semibold text-gray-900">AWS Cloud Practitioner</span>
+                        <input type="checkbox" id="cert4" class="cert-checkbox h-5 w-5 text-blue-600 rounded border-gray-300 focus:ring-blue-500">
+                    </label>
+                    <p class="text-sm text-gray-500 mt-2">Cost: ~$100</p>
+                    <p class="text-gray-700 mt-3"><strong>Fit:</strong> Needed for government/enterprise roles.</p>
+                </div>
+
+                <!-- Cert Card 5 -->
+                <div class="bg-white border border-gray-200 rounded-lg p-5 shadow-sm">
+                    <label for="cert5" class="flex items-center justify-between cursor-pointer">
+                        <span class="text-lg font-semibold text-gray-900">Google Cloud Digital Leader</span>
+                        <input type="checkbox" id="cert5" class="cert-checkbox h-5 w-5 text-blue-600 rounded border-gray-300 focus:ring-blue-500">
+                    </label>
+                    <p class="text-sm text-gray-500 mt-2">Cost: ~$99</p>
+                    <p class="text-gray-700 mt-3"><strong>Fit:</strong> Pairs with your ability to explain AI to humans.</p>
+                </div>
+
+                <!-- Cert Card 6 -->
+                <div class="bg-white border border-gray-200 rounded-lg p-5 shadow-sm">
+                    <label for="cert6" class="flex items-center justify-between cursor-pointer">
+                        <span class="text-lg font-semibold text-gray-900">MITx AGI Foundations</span>
+                        <input type="checkbox" id="cert6" class="cert-checkbox h-5 w-5 text-blue-600 rounded border-gray-300 focus:ring-blue-500">
+                    </label>
+                    <p class="text-sm text-gray-500 mt-2">Cost: $199 (Optional)</p>
+                    <p class="text-gray-700 mt-3"><strong>Fit:</strong> Matches your psychology + AI behavior obsession.</p>
+                </div>
+            </div>
+        </details>
+
+        <!-- Budget Overview -->
+        <details class="mb-6">
+            <summary class="text-2xl font-semibold text-gray-800 py-2">Budget Tracker</summary>
+            <div class="bg-green-50 border-l-4 border-green-500 p-5 rounded-r-lg mt-4">
+                <h3 class="text-xl font-semibold text-green-800 mb-3">NSORO Funding: $1,200 / Semester</h3>
+                <ul class="list-disc list-inside text-green-700 space-y-2">
+                    <li><strong>Total Cost (All 6 Certs):</strong> ≈ $1,312</li>
+                    <li><strong>Avg. Cost per Semester:</strong> ≈ $328</li>
+                    <li class="font-bold"><strong>Status:</strong> WELL below the $1,200 limit. You will not run out of funding.</li>
+                </ul>
+            </div>
+        </details>
+
+        <!-- 4-Semester Roadmap -->
+        <details open class="mb-6">
+            <summary class="text-2xl font-semibold text-gray-800 py-2">4-Semester Roadmap</summary>
+            
+            <div class="space-y-4 mt-4">
+                <!-- Fall 2026 -->
+                <div class="bg-white border border-gray-200 rounded-lg p-6 shadow-sm">
+                    <h3 class="text-2xl font-bold text-gray-900 mb-3">🍂 Fall 2026: Start Strong, Low Stress</h3>
+                    <p class="text-lg font-semibold text-blue-700">Target: Google AI/ML Certificate</p>
+                    <div class="grid grid-cols-1 md:grid-cols-3 gap-4 mt-4">
+                        <div>
+                            <p class="font-semibold text-gray-600">Cost</p>
+                            <p class="text-gray-800">~$200</p>
+                        </div>
+                         <div>
+                            <p class="font-semibold text-gray-600">Weekly Load</p>
+                            <p class="text-gray-800">4-6 hours</p>
+                        </div>
+                        <div>
+                            <p class="font-semibold text-gray-600">Why this cert?</p>
+                            <p class="text-gray-800">Trains you to talk to AI better—your natural gift.</p>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Spring 2027 -->
+                <div class="bg-white border border-gray-200 rounded-lg p-6 shadow-sm">
+                    <h3 class="text-2xl font-bold text-gray-900 mb-3">🌱 Spring 2027: Real Skill Building</h3>
+                    <p class="text-lg font-semibold text-blue-700">Target: CompTIA Data+</p>
+                    <div class="grid grid-cols-1 md:grid-cols-3 gap-4 mt-4">
+                        <div>
+                            <p class="font-semibold text-gray-600">Cost</p>
+                            <p class="text-gray-800">~$519</p>
+                        </div>
+                         <div>
+                            <p class="font-semibold text-gray-600">Weekly Load</p>
+                            <p class="text-gray-800">4-6 hours</p>
+                        </div>
+                        <div>
+                            <p class="font-semibold text-gray-600">Why this cert?</p>
+                            <p class="text-gray-800">Your whole career depends on understanding the data behind the model.</p>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Fall 2027 -->
+                <div class="bg-white border border-gray-200 rounded-lg p-6 shadow-sm">
+                    <h3 class="text-2xl font-bold text-gray-900 mb-3">🍂 Fall 2027: Agent Builder Era</h3>
+                    <p class="text-lg font-semibold text-blue-700">Target: IBM Applied AI Professional Certificate</p>
+                    <div class="grid grid-cols-1 md:grid-cols-3 gap-4 mt-4">
+                        <div>
+                            <p class="font-semibold text-gray-600">Cost</p>
+                            <p class="text-gray-800">~$195</p>
+                        </div>
+                         <div>
+                            <p class="font-semibold text-gray-600">Weekly Load</p>
+                            <p class="text-gray-800">3-5 hours</p>
+                        </div>
+                        <div>
+                            <p class="font-semibold text-gray-600">Why this cert?</p>
+                            <p class="text-gray-800">Unlocks your niche → building agents that reason like humans.</p>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Spring 2028 -->
+                <div class="bg-white border border-gray-200 rounded-lg p-6 shadow-sm">
+                    <h3 class="text-2xl font-bold text-gray-900 mb-3">🌱 Spring 2028: Cloud + Government Pathway</h3>
+                    <p class="text-lg font-semibold text-blue-700">Targets: AWS Practitioner, Google Cloud Leader, MITx AGI</p>
+                    <div class="grid grid-cols-1 md:grid-cols-3 gap-4 mt-4">
+                        <div>
+                            <p class="font-semibold text-gray-600">Total Cost</p>
+                            <p class="text-gray-800">~$398</p>
+                        </div>
+                         <div>
+                            <p class="font-semibold text-gray-600">Weekly Load</p>
+                            <p class="text-gray-800">Low intensity, certs are short.</p>
+                        </div>
+                        <div>
+                            <p class="font-semibold text-gray-600">Why these?</p>
+                            <p class="text-gray-800">Secures government/enterprise viability and fits your psychology goals.</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </details>
+
+        <!-- Weekly Schedule & Niche -->
+        <div class="grid grid-cols-1 md:grid-cols-2 gap-6 mt-6">
+            <!-- Weekly Schedule -->
+            <details open class="col-span-1">
+                <summary class="text-2xl font-semibold text-gray-800 py-2">Daily Schedule (Comfort Mode)</summary>
+                <div class="bg-indigo-50 border border-indigo-200 rounded-lg p-6 mt-4">
+                    <ul class="space-y-3">
+                        <li class="flex items-center">
+                            <input id="day1" type="checkbox" class="h-4 w-4 text-indigo-600 rounded mr-3">
+                            <label for="day1" class="text-gray-800"><strong>Mon:</strong> 45–60 min study</label>
+                        </li>
+                        <li class="flex items-center">
+                             <input id="day2" type="checkbox" class="h-4 w-4 text-indigo-600 rounded mr-3">
+                            <label for="day2" class="text-gray-800"><strong>Wed:</strong> 45–60 min study</label>
+                        </li>
+                        <li class="flex items-center">
+                             <input id="day3" type="checkbox" class="h-4 w-4 text-indigo-600 rounded mr-3">
+                            <label for="day3" class="text-gray-800"><strong>Sat:</strong> 1 hour (mock exams, labs, practice)</label>
+                        </li>
+                        <li class="flex items-center">
+                            <input id="day4" type="checkbox" class="h-4 w-4 text-indigo-600 rounded mr-3">
+                            <label for="day4" class="text-gray-700"><strong>Sun:</strong> optional 30 min ("keep the mind warm")</label>
+                        </li>
+                    </ul>
+                    <p class="text-indigo-600 mt-4">The rest of the week is for life, work, and creative engineering.</p>
+                </div>
+            </details>
+
+            <!-- Your Niche -->
+            <details open class="col-span-1">
+                <summary class="text-2xl font-semibold text-gray-800 py-2">Your Niche & Career Path</summary>
+                <div class="bg-gray-100 border border-gray-200 rounded-lg p-6 mt-4">
+                    <h4 class="text-xl font-bold text-gray-900">AI-to-Human Translator + Agent Architect</h4>
+                    <p class="text-gray-700 my-3">This cert path makes you employable as:</p>
+                    <ul class="list-disc list-inside text-gray-700 space-y-1">
+                        <li>AI Product Analyst</li>
+                        <li>AI Interaction Designer</li>
+                        <li>Prompt Engineer</li>
+                        <li>Junior AI Research Associate</li>
+                        <li>Government AI Ops Assistant</li>
+                        <li>Automation Architect</li>
+                        <li>Conversational AI Designer</li>
+                    </ul>
+                </div>
+            </details>
+        </div>
+
+    </div>
+
+    <script>
+        // JavaScript to update the progress bar
+        document.addEventListener('DOMContentLoaded', () => {
+            const checkboxes = document.querySelectorAll('.cert-checkbox');
+            const progressBar = document.getElementById('progressBar');
+            const progressText = document.getElementById('progressText');
+            const totalCerts = checkboxes.length;
+
+            function updateProgress() {
+                let checkedCount = 0;
+                checkboxes.forEach(cb => {
+                    if (cb.checked) {
+                        checkedCount++;
+                    }
+                });
+
+                const percentage = totalCerts > 0 ? (checkedCount / totalCerts) * 100 : 0;
+                
+                progressBar.style.width = `${percentage}%`;
+                progressText.textContent = `${checkedCount} / ${totalCerts}`;
+            }
+
+            checkboxes.forEach(cb => {
+                cb.addEventListener('change', updateProgress);
+            });
+
+            // Initial call to set progress on load
+            updateProgress();
+        });
+    </script>
+
+</body>
+</html>
